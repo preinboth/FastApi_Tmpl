@@ -1,5 +1,6 @@
 from dotenv import find_dotenv, load_dotenv
 
+from config.database.databases import DatabaseSettings
 from config.media import MediaSettings
 from config.openapi import OpenApiSettings
 from config.running_mode import RunningModeSettings
@@ -13,6 +14,7 @@ class Settings(
     ServerSettings,
     SecuritySettings,
     OpenApiSettings,
+    DatabaseSettings,
     MediaSettings,
     RunningModeSettings,
 ):
@@ -24,7 +26,7 @@ class Settings(
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
-        extra = "ignore"  # Ignoriere zusätzliche Eingabewerte
+        extra = "ignore"  # Ignore zusätzliche Eingabewerte
 
 
 settings = Settings()
