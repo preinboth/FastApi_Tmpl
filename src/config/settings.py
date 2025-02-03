@@ -13,7 +13,7 @@ load_dotenv(find_dotenv())
 class Settings(
     ServerSettings,
     SecuritySettings,
-    OpenApiSettings,
+        OpenApiSettings,
     DatabaseSettings,
     MediaSettings,
     RunningModeSettings,
